@@ -12,5 +12,8 @@ Rules:
 
 ![Screen_shot_2012-03-05_at_8 52 35_PM](https://user-images.githubusercontent.com/57306606/85798209-b1dba180-b702-11ea-8206-824a2f3d5fc6.png)
 
-Given these rules we are able to make unique patterns and animations.
+### Given these rules we are able to make unique patterns and animations.
+
+![68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3456565a547654717a5252304255774e49482f67697068792e676966](https://user-images.githubusercontent.com/57306606/85798460-20206400-b703-11ea-8ffa-be23f50271f9.gif)
+
 
