@@ -21,3 +21,8 @@ Rules:
 Creating this game was quite a bit of fun. Although I will admit it was a tough project figuring how to turn the rules into code. Making helper functions was a breeze and making the grid itself was also intiutive. In school I learned of the UPER. UPER stands for UNDERSTAND, PLAN, EXECUTE, REFLECT. During the understand and plan phase of this project I was writing a bunch of pseduocode. At some point I thought to myself...can't I just turn this into code now? The Vanilla Javascript was the result of this. I did get lost quite often and ran into many bugs and syntax errors. I was trying my best to brush off the rust on my JavaScript skills.
 
 I also wanted to create a more interactive version of this game, hence the React version of Game of Life. In that directory lays a version where the user can populate their own grid, pause, and speed up the animation. You can even populate cells while the animation is playing. 
+
+
+### Future Versions
+
+Eventually I would like to return to this project. There are still many ways I could refactor my code. Also, I would like to add more features to this game, maybe some presets that show off unique animations. Possibly increase the grid size to fit bigger animations. There's a youtube video that showcases large versions of this game. 
