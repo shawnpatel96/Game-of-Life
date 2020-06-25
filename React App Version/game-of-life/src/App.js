@@ -24,6 +24,7 @@ class App extends React.Component{
         grid: gridCopy
       })
     }
+    // Buttons
     playButton = () =>{
       clearInterval(this.intervalId)
       this.intervalId = setInterval(this.play, this.speed);
@@ -38,6 +39,7 @@ class App extends React.Component{
               generation: 0
           });
     }
+    //Helper Functions
     fast = () =>{
       this.speed = this.speed - 100
       this.playButton()
