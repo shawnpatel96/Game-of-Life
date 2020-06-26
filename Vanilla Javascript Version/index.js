@@ -7,6 +7,7 @@
 // Any dead cell with three live neighbours becomes a live cell.
 // All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 
+// This implementation of game of life doesn't utilize double buffering
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 const size = 800;
@@ -43,9 +44,10 @@ function createCells(){
     return arr
 };
 function randomCells(){
-    // Keep track of Cell State (alive or dead) 
+    //Fill Board with random amount of cells
     for (let y=0; y < resolution; y++){
         for (let x=0; x < resolution; x++){
+            // fill board with cells less than half of the board with math.random()
             if(Math.random() < 0.5) cells[x][y] = true
         
         }
