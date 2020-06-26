@@ -13,10 +13,11 @@ class App extends React.Component{
   
       this.state={
         generation:0,
-        //Grid Creation, An Array of Rows and an Array of Columns, set to false state to begin with
+        //Grid Creation of nest Arrays, An Array of Rows and an Array of Columns, set to false state to begin with
         grid: Array(this.rows).fill().map(()=> Array(this.columns).fill(false))
       }
     }
+    
     selectBox = (row, col) =>{
       let gridCopy = arrayClone(this.state.grid);
       gridCopy[row][col] = !gridCopy[row][col];
@@ -52,6 +53,7 @@ class App extends React.Component{
       let g = this.state.grid;
       let g2 = arrayClone(this.state.grid);
       // Game of Life Rules
+      // Loop through X and Y axis of the nested Arrays
       for (let x = 0; x < this.rows; x++) {
             for (let y = 0; y < this.columns; y++) {
               let count = 0;

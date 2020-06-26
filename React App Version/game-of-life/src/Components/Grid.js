@@ -19,8 +19,9 @@ class Grid extends React.Component{
     render(){
       let rowsArr = [];
       let boxClass = "";
-      for(let x = 0; x<this.props.rows; x++){
-        for(let y = 0; y<this.props.columns; y++){
+      for(let x = 0; x < this.props.rows; x++){
+        for(let y = 0; y < this.props.columns; y++){
+          // Check spot [x][y] coords to see if class is enabled or not
           boxClass = this.props.grid[x][y] ? 'box on' : 'box off';
           rowsArr.push(
             <Box
