@@ -5,6 +5,8 @@ body{
 }
 
 #canvas{
+    
     margin:50px;
     background:white;
+    border:12px solid red;
 }

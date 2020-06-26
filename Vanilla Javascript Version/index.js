@@ -10,8 +10,8 @@
 // This implementation of game of life doesn't utilize double buffering
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
-const size = 800;
-const scale = 8;
+const size = 1200;
+const scale = 4;
 const resolution = size / scale;
 const speed = 50    
 let cells;
@@ -21,10 +21,11 @@ randomCells()
 drawCells();
 step()
 setInterval(step, speed)
+
 console.log(getNeighborCount(resolution-1,resolution-1))
 // Setup of Canvas/Pixel Sizes
 function setup(){
-    canvas.width= size;
+    canvas.width= 1200;
     canvas.height=size;
     context.scale(scale,scale);
     context.fillstyle="black";
@@ -44,7 +45,7 @@ function createCells(){
     return arr
 };
 function randomCells(){
-    //Fill Board with random amount of cells
+    //Fill Board with random amount of cells less than resolution
     for (let y=0; y < resolution; y++){
         for (let x=0; x < resolution; x++){
             // fill board with cells less than half of the board with math.random()

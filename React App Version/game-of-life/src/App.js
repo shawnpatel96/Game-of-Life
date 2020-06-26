@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 import Grid from './Components/Grid'
 import Buttons from './Components/Buttons'
@@ -19,7 +18,7 @@ class App extends React.Component{
     }
     
     selectBox = (row, col) =>{
-      let gridCopy = arrayClone(this.state.grid);
+      let gridCopy = JSON.parse(JSON.stringify(this.state.grid));
       gridCopy[row][col] = !gridCopy[row][col];
       this.setState({
         grid: gridCopy
@@ -51,7 +50,7 @@ class App extends React.Component{
       }
     play = () =>{
       let g = this.state.grid;
-      let g2 = arrayClone(this.state.grid);
+      let g2 = JSON.parse(JSON.stringify(this.state.grid));
       // Game of Life Rules
       // Loop through X and Y axis of the nested Arrays
       for (let x = 0; x < this.rows; x++) {
@@ -76,7 +75,7 @@ class App extends React.Component{
     }
     randomize =()=>{
       console.log("RUNNING SEED")
-      let gridCopy = arrayClone(this.state.grid);
+      let gridCopy = JSON.parse(JSON.stringify(this.state.grid));
       for(let x = 0; x< this.rows; x++){
         for(let y = 0; y< this.columns; y++){
           if (Math.floor(Math.random() * 4) ===1){
@@ -100,7 +99,7 @@ class App extends React.Component{
             selectBox={this.props.selectBox}
           />
           <Buttons 
-            playButton={this.playButton}
+              playButton={this.playButton}
               pauseButton={this.pauseButton}
               slow={this.slow}
               fast={this.fast}
@@ -129,8 +128,6 @@ class App extends React.Component{
       )
     }
   }
-  function arrayClone(arr){
-    return JSON.parse(JSON.stringify(arr));
-  }
+ 
 
 export default App
